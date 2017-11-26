@@ -1,0 +1,30 @@
+<div class='grid-div'>
+  <table id='play_grid'>
+    <input class = 'row_val' type='hidden' value= '<%=@row%>'>
+    <input class = 'col_val' type='hidden' value= '<%=@col%>'>
+    <% @row.times do |y| %>
+    <tr class= 'row_<%= y.to_s %>'>
+      <% @col.times do |x| %>
+        <td class= 'col_<%= x.to_s %> clickable'>
+          <input class = 'x' type='hidden' value= '<%=x%>'>
+          <input class = 'y' type='hidden' value= '<%=y%>'>
+        </td>
+
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+  <div class='row'>
+    <div class='small-3 columns'>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='generation-and-button'>
+      <button id="clear">Clear</button>
+      <button id="start">Start</button>
+    </div>
+  </div>
+</div>
+
+
+
